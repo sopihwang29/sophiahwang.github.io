@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClimbBot | Sophia Hwang</title>
+  <meta name="description" content="A SolidWorks-designed robot that climbs inclines, picks up objects, and places them on platforms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="nav">
+    <a href="../index.html" class="logo">sophia<span>.</span></a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#courses">Courses</a>
+      <a href="../index.html#beyond">Beyond the lab</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button id="themeToggle" class="toggle" aria-label="Switch theme">
+      <span class="dot"></span><span class="label">blue</span>
+    </button>
+  </header>
+
+  <main class="project-page">
+    <section class="p-hero">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <div class="p-banner t-b">
+        <img src="../images/robot.jpg" alt="" onerror="this.remove()" />
+        <span class="emoji">🤖</span>
+      </div>
+      <p class="meta">Sep – Dec 2025 · Computer Aided Machine Design</p>
+      <h1>ClimbBot</h1>
+      <p class="lead">A robot designed in SolidWorks that traverses inclines, picks up different objects, and places them on platforms to score points.</p>
+      <div class="tags"><span>SolidWorks</span><span>CAD</span><span>Mechanical Design</span></div>
+      <div class="cta">
+        <a class="btn primary" href="../reports/robot-report.pdf" target="_blank" rel="noopener">📄 Read the project report</a>
+        <!-- No GitHub repo yet. When you make one, add:
+        <a class="btn ghost" href="https://github.com/sopihwang29/REPO_NAME" target="_blank" rel="noopener">View on GitHub</a> -->
+      </div>
+    </section>
+
+    <section class="p-grid">
+      <div class="p-main">
+        <div class="block reveal">
+          <h2>Overview</h2>
+          <p>For Computer Aided Machine Design, I designed a robot in SolidWorks that can drive up inclines, pick up different objects, and place them on different platforms to score points.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Design process</h2>
+          <p class="placeholder">✏️ Add: the competition rules, your early sketches, how you chose the drivetrain and gripper, and any iterations.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Challenges &amp; what I learned</h2>
+          <p class="placeholder">✏️ Add: what didn't work the first time, how you fixed it, and what you'd change next time.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Gallery</h2>
+          <div class="gallery">
+            <figure class="shot"><img src="../images/robot-1.jpg" alt="Robot CAD render" onerror="this.remove()" /><figcaption>Add image: CAD render</figcaption></figure>
+            <figure class="shot"><img src="../images/robot-2.jpg" alt="Robot built" onerror="this.remove()" /><figcaption>Add photo: the built robot</figcaption></figure>
+            <figure class="shot"><img src="../images/robot-3.jpg" alt="Robot on the course" onerror="this.remove()" /><figcaption>Add photo or video: on the course</figcaption></figure>
+          </div>
+        </div>
+      </div>
+
+      <aside class="facts reveal">
+        <h3>Project facts</h3>
+        <dl>
+          <dt>Timeline</dt><dd>September – December 2025</dd>
+          <dt>Course</dt><dd>Computer Aided Machine Design</dd>
+          <dt>Tools</dt><dd>SolidWorks</dd>
+          <dt>Capabilities</dt><dd>Climbs inclines, picks up objects, places them on platforms</dd>
+          <dt>Links</dt>
+          <dd><a href="../reports/robot-report.pdf" target="_blank" rel="noopener">Project report (PDF)</a></dd>
+        </dl>
+      </aside>
+    </section>
+
+    <nav class="pn">
+      <a href="piano-man.html"><span>← Previous</span>Tempo Tiles</a>
+      <a href="matcha-brewer.html" class="next"><span>Next →</span>Matcha Brewer</a>
+    </nav>
+  </main>
+
+  <footer>© <span id="year"></span> Sophia Hwang</footer>
+  <script src="../script.js"></script>
+</body>
+</html>

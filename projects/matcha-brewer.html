@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matcha Brewer | Sophia Hwang</title>
+  <meta name="description" content="A full-stack website where users log matcha drink creations, play a whisking game, and complete missions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="nav">
+    <a href="../index.html" class="logo">sophia<span>.</span></a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#courses">Courses</a>
+      <a href="../index.html#beyond">Beyond the lab</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button id="themeToggle" class="toggle" aria-label="Switch theme">
+      <span class="dot"></span><span class="label">blue</span>
+    </button>
+  </header>
+
+  <main class="project-page">
+    <section class="p-hero">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <div class="p-banner t-c">
+        <img src="../images/matcha.jpg" alt="" onerror="this.remove()" />
+        <span class="emoji">🍵</span>
+      </div>
+      <p class="meta">Nov – Dec 2025 · Introduction to Computer Science Final Project</p>
+      <h1>Matcha Brewer</h1>
+      <p class="lead">A website where you can log new drink creations, play a whisking game, and complete missions.</p>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>Python</span><span>JavaScript</span><span>SQL</span><span>Jinja</span></div>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/sopihwang29/Matcha-Brewer" target="_blank" rel="noopener">View on GitHub</a>
+        <!-- If you deploy it, add a live demo button:
+        <a class="btn ghost" href="LIVE_DEMO_URL" target="_blank" rel="noopener">Live demo</a> -->
+      </div>
+    </section>
+
+    <section class="p-grid">
+      <div class="p-main">
+        <div class="block reveal">
+          <h2>Overview</h2>
+          <p>Matcha Brewer is my final project for Introduction to Computer Science (CS50). Users log in, record new drink creations, play a whisking game, and take on missions.</p>
+          <p>It's a full-stack web app built with HTML, CSS, Python, JavaScript, SQL, and Jinja templates.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Features</h2>
+          <p class="placeholder">✏️ Add: a walkthrough of each feature (login, drink log, whisking game, missions) with a screenshot for each.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>How it's built</h2>
+          <p class="placeholder">✏️ Add: the database tables, how Python/Flask routes connect to the templates, and how the whisking game works in JavaScript.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Challenges &amp; what I learned</h2>
+          <p class="placeholder">✏️ Add: what surprised you, what you'd add next, and what you learned about full-stack development.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Gallery</h2>
+          <div class="gallery">
+            <figure class="shot"><img src="../images/matcha-1.jpg" alt="Matcha Brewer home page" onerror="this.remove()" /><figcaption>Add screenshot: home page</figcaption></figure>
+            <figure class="shot"><img src="../images/matcha-2.jpg" alt="Whisking game" onerror="this.remove()" /><figcaption>Add screenshot: whisking game</figcaption></figure>
+            <figure class="shot"><img src="../images/matcha-3.jpg" alt="Missions page" onerror="this.remove()" /><figcaption>Add screenshot: missions</figcaption></figure>
+          </div>
+        </div>
+      </div>
+
+      <aside class="facts reveal">
+        <h3>Project facts</h3>
+        <dl>
+          <dt>Timeline</dt><dd>November – December 2025</dd>
+          <dt>Course</dt><dd>Introduction to Computer Science</dd>
+          <dt>Stack</dt><dd>HTML, CSS, Python, JavaScript, SQL, Jinja</dd>
+          <dt>Links</dt>
+          <dd><a href="https://github.com/sopihwang29/Matcha-Brewer" target="_blank" rel="noopener">GitHub repository</a></dd>
+        </dl>
+      </aside>
+    </section>
+
+    <nav class="pn">
+      <a href="robot.html"><span>← Previous</span>ClimbBot</a>
+      <a href="nand2tetris.html" class="next"><span>Next →</span>Ground-Up Computer</a>
+    </nav>
+  </main>
+
+  <footer>© <span id="year"></span> Sophia Hwang</footer>
+  <script src="../script.js"></script>
+</body>
+</html>

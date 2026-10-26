@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="progress" aria-hidden="true"></div>
   <div class="glow" aria-hidden="true"></div>
   <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 
@@ -62,37 +63,45 @@
     <!-- PROJECTS -->
     <section id="projects">
       <h2 class="reveal">Projects</h2>
-      <p class="sub reveal">Things I've designed, built, and debugged at 2 a.m.</p>
+      <p class="sub reveal">Click any project for the full story, photos, and code.</p>
 
-      <div class="grid">
-        <article class="card tilt reveal">
+      <div class="filters reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="hardware">Hardware</button>
+        <button class="filter" data-filter="software">Software</button>
+        <button class="filter" data-filter="mechanical">Mechanical</button>
+      </div>
+
+      <div class="grid" id="projectGrid">
+        <a class="card tilt reveal" href="projects/piano-man.html" data-cat="hardware software">
           <div class="thumb t-a">
             <img src="images/piano-man.jpg" alt="" onerror="this.remove()" />
             <span class="emoji">🎹</span>
           </div>
           <div class="body">
             <p class="meta">Apr – May 2026 · Embedded</p>
-            <h3>Piano Man</h3>
-            <p>A real-time arcade game inspired by Piano Tiles, built on an Arduino MKR Zero and ESP32 with physical inputs, LEDs, audio, and Wi-Fi. Event-driven game logic, timing control, and live scoring in C++.</p>
+            <h3>Tempo Tiles</h3>
+            <p>A real-time arcade game inspired by Piano Tiles, built on an Arduino MKR Zero and ESP32 with physical inputs, LEDs, audio, and Wi-Fi.</p>
             <div class="tags"><span>C++</span><span>Arduino</span><span>ESP32</span><span>Wi-Fi</span></div>
-            <!-- <a class="link" href="YOUR_GITHUB_LINK">View on GitHub →</a> -->
+            <span class="view">View project <i>→</i></span>
           </div>
-        </article>
+        </a>
 
-        <article class="card tilt reveal">
+        <a class="card tilt reveal" href="projects/robot.html" data-cat="mechanical hardware">
           <div class="thumb t-b">
             <img src="images/robot.jpg" alt="" onerror="this.remove()" />
             <span class="emoji">🤖</span>
           </div>
           <div class="body">
             <p class="meta">Sep – Dec 2025 · Mechanical</p>
-            <h3>Robot</h3>
-            <p>A SolidWorks-designed robot that climbs inclines, picks up different objects, and places them on platforms to score points. Built for Computer-Aided Machine Design.</p>
+            <h3>ClimbBot</h3>
+            <p>A SolidWorks-designed robot that climbs inclines, picks up different objects, and places them on platforms to score points.</p>
             <div class="tags"><span>SolidWorks</span><span>CAD</span><span>Design</span></div>
+            <span class="view">View project <i>→</i></span>
           </div>
-        </article>
+        </a>
 
-        <article class="card tilt reveal">
+        <a class="card tilt reveal" href="projects/matcha-brewer.html" data-cat="software">
           <div class="thumb t-c">
             <img src="images/matcha.jpg" alt="" onerror="this.remove()" />
             <span class="emoji">🍵</span>
@@ -100,23 +109,25 @@
           <div class="body">
             <p class="meta">Nov – Dec 2025 · Web</p>
             <h3>Matcha Brewer</h3>
-            <p>A website where users log new drink creations, play a whisking game, and complete missions. Full stack with user accounts and a database. Final project for Intro to Computer Science.</p>
-            <div class="tags"><span>Python</span><span>JavaScript</span><span>SQL</span><span>Jinja</span><span>HTML/CSS</span></div>
+            <p>A website where users log new drink creations, play a whisking game, and complete missions. Full stack, with accounts and a database.</p>
+            <div class="tags"><span>Python</span><span>JavaScript</span><span>SQL</span><span>Jinja</span></div>
+            <span class="view">View project <i>→</i></span>
           </div>
-        </article>
+        </a>
 
-        <article class="card tilt reveal">
+        <a class="card tilt reveal" href="projects/nand2tetris.html" data-cat="hardware software">
           <div class="thumb t-d">
             <img src="images/nand2tetris.jpg" alt="" onerror="this.remove()" />
             <span class="emoji">💾</span>
           </div>
           <div class="body">
-            <p class="meta">Sep 2023 – Jun 2024 · Systems</p>
-            <h3>Nand2Tetris</h3>
-            <p>Built a general-purpose computer's hardware platform and software stack, starting from a single NAND gate. Hack Assembly, Jack, and Python.</p>
+            <p class="meta">Sep 2023 – Jun 2024 · Nand2Tetris</p>
+            <h3>Ground-Up Computer</h3>
+            <p>A general-purpose computer's hardware platform and software stack, built from a single NAND gate.</p>
             <div class="tags"><span>Hack Assembly</span><span>Jack</span><span>Python</span></div>
+            <span class="view">View project <i>→</i></span>
           </div>
-        </article>
+        </a>
       </div>
 
       <div class="now reveal">
@@ -146,12 +157,12 @@
         <div class="course reveal">
           <h3>Computer Aided Machine Design</h3>
           <p>Designing and CAD-modeling mechanisms. Project: the climbing, object-placing robot.</p>
-          <div class="tags"><span>SolidWorks</span><a class="mini" href="#projects">→ Robot</a></div>
+          <div class="tags"><span>SolidWorks</span><a class="mini" href="projects/robot.html">→ ClimbBot</a></div>
         </div>
         <div class="course reveal">
           <h3>Introduction to Computer Science</h3>
           <p>Programming, algorithms, and web development. Project: Matcha Brewer.</p>
-          <div class="tags"><span>Python</span><span>SQL</span><a class="mini" href="#projects">→ Matcha Brewer</a></div>
+          <div class="tags"><span>Python</span><span>SQL</span><a class="mini" href="projects/matcha-brewer.html">→ Matcha Brewer</a></div>
         </div>
         <div class="course reveal">
           <h3>Introduction to Electrical Engineering</h3>
@@ -198,65 +209,13 @@
       <p>Happy to talk about hardware, projects, or matcha.</p>
       <div class="cta center">
         <a class="btn primary" href="mailto:sophiahwang@college.harvard.edu">Email me</a>
+        <a class="btn ghost" href="https://github.com/sopihwang29" target="_blank" rel="noopener">GitHub</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/sophia-hwang-05a4752b6" target="_blank" rel="noopener">LinkedIn</a>
-        <!-- <a class="btn ghost" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub</a> -->
       </div>
     </section>
   </main>
 
   <footer>© <span id="year"></span> Sophia Hwang</footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Theme toggle (remembers choice)
-    const root = document.documentElement;
-    const label = document.querySelector('#themeToggle .label');
-    function setTheme(t) {
-      root.dataset.theme = t;
-      label.textContent = t;
-      try { localStorage.setItem('theme', t); } catch (e) {}
-    }
-    let saved = null;
-    try { saved = localStorage.getItem('theme'); } catch (e) {}
-    setTheme(saved === 'pink' ? 'pink' : 'blue');
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      setTheme(root.dataset.theme === 'blue' ? 'pink' : 'blue');
-    });
-
-    // Cursor glow
-    window.addEventListener('pointermove', e => {
-      root.style.setProperty('--mx', e.clientX + 'px');
-      root.style.setProperty('--my', e.clientY + 'px');
-    });
-
-    // Scroll reveal
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Card tilt
-    if (matchMedia('(hover: hover)').matches) {
-      document.querySelectorAll('.tilt').forEach(card => {
-        card.addEventListener('pointermove', e => {
-          const r = card.getBoundingClientRect();
-          const x = (e.clientX - r.left) / r.width - 0.5;
-          const y = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = `perspective(900px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg) translateY(-4px)`;
-        });
-        card.addEventListener('pointerleave', () => { card.style.transform = ''; });
-      });
-    }
-
-    // Cello / Matcha tabs
-    document.querySelectorAll('.tab').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab, .tab-panel').forEach(el => el.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

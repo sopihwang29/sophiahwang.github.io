@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tempo Tiles | Sophia Hwang</title>
+  <meta name="description" content="A real-time embedded arcade game inspired by Piano Tiles, built with an Arduino MKR Zero and ESP32." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="nav">
+    <a href="../index.html" class="logo">sophia<span>.</span></a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#courses">Courses</a>
+      <a href="../index.html#beyond">Beyond the lab</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button id="themeToggle" class="toggle" aria-label="Switch theme">
+      <span class="dot"></span><span class="label">blue</span>
+    </button>
+  </header>
+
+  <main class="project-page">
+    <section class="p-hero">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <div class="p-banner t-a">
+        <img src="../images/piano-man.jpg" alt="" onerror="this.remove()" />
+        <span class="emoji">🎹</span>
+      </div>
+      <p class="meta">Apr – May 2026 · Embedded Systems</p>
+      <h1>Tempo Tiles</h1>
+      <p class="lead">A real-time arcade game inspired by the mobile app Piano Tiles, built from scratch with physical buttons, LEDs, audio, and Wi-Fi.</p>
+      <div class="tags"><span>C++</span><span>Arduino MKR Zero</span><span>ESP32</span><span>Wi-Fi</span><span>Embedded</span></div>
+      <div class="cta">
+        <a class="btn primary" href="../reports/piano-man-report.pdf" target="_blank" rel="noopener">📄 Read the project report</a>
+        <!-- No GitHub repo yet. When you make one, add:
+        <a class="btn ghost" href="https://github.com/sopihwang29/REPO_NAME" target="_blank" rel="noopener">View on GitHub</a> -->
+      </div>
+    </section>
+
+    <section class="p-grid">
+      <div class="p-main">
+        <div class="block reveal">
+          <h2>Overview</h2>
+          <p>Tempo Tiles is a real-time embedded arcade game inspired by Piano Tiles. It uses an Arduino MKR Zero and an ESP32 and integrates physical inputs, LED outputs, audio, and Wi-Fi communication, all written in C++.</p>
+          <p>The game runs on event-driven logic with careful timing control, score tracking, and real-time user interaction.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>How it works</h2>
+          <p class="placeholder">✏️ Add: a short description of the hardware setup, how the two boards talk to each other, and how a round of the game plays out.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Challenges &amp; what I learned</h2>
+          <p class="placeholder">✏️ Add: the hardest bug, a timing or Wi-Fi problem you solved, and what you'd do differently.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Gallery</h2>
+          <div class="gallery">
+            <figure class="shot"><img src="../images/piano-man-1.jpg" alt="Piano Man build" onerror="this.remove()" /><figcaption>Add photo: finished build</figcaption></figure>
+            <figure class="shot"><img src="../images/piano-man-2.jpg" alt="Piano Man wiring" onerror="this.remove()" /><figcaption>Add photo: wiring / breadboard</figcaption></figure>
+            <figure class="shot"><img src="../images/piano-man-3.jpg" alt="Piano Man gameplay" onerror="this.remove()" /><figcaption>Add photo or video: gameplay</figcaption></figure>
+          </div>
+          <!-- For a demo video, paste a YouTube embed here:
+          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div> -->
+        </div>
+      </div>
+
+      <aside class="facts reveal">
+        <h3>Project facts</h3>
+        <dl>
+          <dt>Timeline</dt><dd>April – May 2026</dd>
+          <dt>Type</dt><dd>Embedded systems</dd>
+          <dt>Hardware</dt><dd>Arduino MKR Zero, ESP32, LEDs, physical inputs, audio</dd>
+          <dt>Language</dt><dd>C++</dd>
+          <dt>Links</dt>
+          <dd><a href="../reports/piano-man-report.pdf" target="_blank" rel="noopener">Project report (PDF)</a></dd>
+        </dl>
+      </aside>
+    </section>
+
+    <nav class="pn">
+      <a href="nand2tetris.html"><span>← Previous</span>Ground-Up Computer</a>
+      <a href="robot.html" class="next"><span>Next →</span>ClimbBot</a>
+    </nav>
+  </main>
+
+  <footer>© <span id="year"></span> Sophia Hwang</footer>
+  <script src="../script.js"></script>
+</body>
+</html>
