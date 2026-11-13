@@ -7,18 +7,18 @@
   <meta name="description" content="A full-stack website where users log matcha drink creations, play a whisking game, and complete missions." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <div id="progress" aria-hidden="true"></div>
-  <div class="glow" aria-hidden="true"></div>
   <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="nav">
     <a href="../index.html" class="logo">sophia<span>.</span></a>
     <nav>
       <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#research">Research</a>
       <a href="../index.html#courses">Courses</a>
       <a href="../index.html#beyond">Beyond the lab</a>
       <a href="../index.html#contact">Contact</a>
@@ -41,8 +41,7 @@
       <div class="tags"><span>HTML</span><span>CSS</span><span>Python</span><span>JavaScript</span><span>SQL</span><span>Jinja</span></div>
       <div class="cta">
         <a class="btn primary" href="https://github.com/sopihwang29/Matcha-Brewer" target="_blank" rel="noopener">View on GitHub</a>
-        <!-- If you deploy it, add a live demo button:
-        <a class="btn ghost" href="LIVE_DEMO_URL" target="_blank" rel="noopener">Live demo</a> -->
+        <!-- If you deploy it: <a class="btn ghost" href="LIVE_DEMO_URL" target="_blank" rel="noopener">Live demo</a> -->
       </div>
     </section>
 
@@ -50,31 +49,26 @@
       <div class="p-main">
         <div class="block reveal">
           <h2>Overview</h2>
-          <p>Matcha Brewer is my final project for Introduction to Computer Science (CS50). Users log in, record new drink creations, play a whisking game, and take on missions.</p>
-          <p>It's a full-stack web app built with HTML, CSS, Python, JavaScript, SQL, and Jinja templates.</p>
+          <p>Matcha Brewer is my final project for Introduction to Computer Science (CS50). It's a full-stack web app for matcha lovers, built with HTML, CSS, Python, JavaScript, SQL, and Jinja templates.</p>
         </div>
 
         <div class="block reveal">
           <h2>Features</h2>
-          <p class="placeholder">✏️ Add: a walkthrough of each feature (login, drink log, whisking game, missions) with a screenshot for each.</p>
-        </div>
-
-        <div class="block reveal">
-          <h2>How it's built</h2>
-          <p class="placeholder">✏️ Add: the database tables, how Python/Flask routes connect to the templates, and how the whisking game works in JavaScript.</p>
-        </div>
-
-        <div class="block reveal">
-          <h2>Challenges &amp; what I learned</h2>
-          <p class="placeholder">✏️ Add: what surprised you, what you'd add next, and what you learned about full-stack development.</p>
+          <ul class="ticks">
+            <li><b>User accounts:</b> log in to keep your own drink history</li>
+            <li><b>Drink log:</b> record new matcha creations</li>
+            <li><b>Whisking game:</b> an interactive mini-game built in JavaScript</li>
+            <li><b>Missions:</b> challenges for users to complete</li>
+          </ul>
+          <!-- ADD MORE: paste more <li> items above, or add a block about the database design and what you learned. -->
         </div>
 
         <div class="block reveal">
           <h2>Gallery</h2>
           <div class="gallery">
-            <figure class="shot"><img src="../images/matcha-1.jpg" alt="Matcha Brewer home page" onerror="this.remove()" /><figcaption>Add screenshot: home page</figcaption></figure>
-            <figure class="shot"><img src="../images/matcha-2.jpg" alt="Whisking game" onerror="this.remove()" /><figcaption>Add screenshot: whisking game</figcaption></figure>
-            <figure class="shot"><img src="../images/matcha-3.jpg" alt="Missions page" onerror="this.remove()" /><figcaption>Add screenshot: missions</figcaption></figure>
+            <figure class="shot"><img src="../images/matcha-1.jpg" alt="Matcha Brewer home page" onerror="this.closest('figure').remove()" /><figcaption>Home page</figcaption></figure>
+            <figure class="shot"><img src="../images/matcha-2.jpg" alt="Whisking game" onerror="this.closest('figure').remove()" /><figcaption>Whisking game</figcaption></figure>
+            <figure class="shot"><img src="../images/matcha-3.jpg" alt="Missions page" onerror="this.closest('figure').remove()" /><figcaption>Missions</figcaption></figure>
           </div>
         </div>
       </div>

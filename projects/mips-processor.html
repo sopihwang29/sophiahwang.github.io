@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multicycle MIPS Processor | Sophia Hwang</title>
+  <meta name="description" content="A multicycle MIPS processor designed in SystemVerilog, verified in Vivado, and implemented on an FPGA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="nav">
+    <a href="../index.html" class="logo">sophia<span>.</span></a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#courses">Courses</a>
+      <a href="../index.html#beyond">Beyond the lab</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button id="themeToggle" class="toggle" aria-label="Switch theme">
+      <span class="dot"></span><span class="label">blue</span>
+    </button>
+  </header>
+
+  <main class="project-page">
+    <section class="p-hero">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <div class="p-banner t-e">
+        <img src="../images/mips.jpg" alt="" onerror="this.remove()" />
+        <span class="emoji">🧠</span>
+      </div>
+      <p class="meta">Fall 2026 · Computing Hardware (CS 1410)</p>
+      <h1>Multicycle MIPS Processor</h1>
+      <p class="lead">I designed a multicycle MIPS processor in SystemVerilog, verified it in Vivado, and implemented it on an FPGA.</p>
+      <div class="tags"><span>SystemVerilog</span><span>Vivado</span><span>FPGA</span><span>MIPS</span><span>Computer Architecture</span></div>
+      <div class="cta">
+        <!-- When you have a repo or report, uncomment one of these:
+        <a class="btn primary" href="https://github.com/sopihwang29/REPO_NAME" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn ghost" href="../reports/mips-report.pdf" target="_blank" rel="noopener">📄 Project report</a> -->
+        <a class="btn primary" href="../index.html#research">See my related research →</a>
+      </div>
+    </section>
+
+    <section class="p-grid">
+      <div class="p-main">
+        <div class="block reveal">
+          <h2>Overview</h2>
+          <p>For Computing Hardware, I built a working MIPS processor from the ground up. Rather than doing everything in a single clock cycle, a multicycle design splits each instruction into steps, so hardware like the ALU and memory can be reused across steps and each cycle can be shorter.</p>
+          <p>I wrote the design in SystemVerilog, simulated and debugged it in Vivado, and implemented it on an FPGA.</p>
+        </div>
+
+        <div class="block reveal">
+          <h2>Try it: one instruction, step by step</h2>
+          <p>A multicycle processor runs each instruction through these stages. Click through them:</p>
+          <div class="stages">
+            <button class="stage active" data-stage="fetch">1 · Fetch</button>
+            <button class="stage" data-stage="decode">2 · Decode</button>
+            <button class="stage" data-stage="execute">3 · Execute</button>
+            <button class="stage" data-stage="memory">4 · Memory</button>
+            <button class="stage" data-stage="writeback">5 · Writeback</button>
+          </div>
+          <div class="stage-desc" id="stageDesc"><b>Fetch.</b> The program counter sends an address to instruction memory, the instruction is read into the instruction register, and the PC moves to the next instruction.</div>
+        </div>
+
+        <div class="block reveal">
+          <h2>What I worked with</h2>
+          <ul class="ticks">
+            <li><b>SystemVerilog</b> for the datapath and control logic</li>
+            <li><b>Vivado</b> for simulation, waveform debugging, and synthesis</li>
+            <li><b>FPGA</b> hardware to run the design for real</li>
+          </ul>
+          <!-- ADD MORE: paste a new <li> above for the instructions you support, your control FSM, testing approach, etc. -->
+        </div>
+
+        <div class="block reveal">
+          <h2>Gallery</h2>
+          <div class="gallery">
+            <figure class="shot"><img src="../images/mips-1.jpg" alt="Datapath diagram" onerror="this.closest('figure').remove()" /><figcaption>Datapath diagram</figcaption></figure>
+            <figure class="shot"><img src="../images/mips-2.jpg" alt="Simulation waveform" onerror="this.closest('figure').remove()" /><figcaption>Vivado simulation waveform</figcaption></figure>
+            <figure class="shot"><img src="../images/mips-3.jpg" alt="FPGA demo" onerror="this.closest('figure').remove()" /><figcaption>Running on the FPGA</figcaption></figure>
+          </div>
+          <!-- For a demo video: <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div> -->
+        </div>
+      </div>
+
+      <aside class="facts reveal">
+        <h3>Project facts</h3>
+        <dl>
+          <dt>Course</dt><dd>Computing Hardware (CS 1410)</dd>
+          <dt>Semester</dt><dd>Fall 2026</dd>
+          <dt>Architecture</dt><dd>MIPS, multicycle</dd>
+          <dt>Tools</dt><dd>SystemVerilog, Vivado, FPGA</dd>
+        </dl>
+      </aside>
+    </section>
+
+    <nav class="pn">
+      <a href="nand2tetris.html"><span>← Previous</span>Ground-Up Computer</a>
+      <a href="piano-man.html" class="next"><span>Next →</span>Tempo Tiles</a>
+    </nav>
+  </main>
+
+  <footer>© <span id="year"></span> Sophia Hwang</footer>
+  <script src="../script.js"></script>
+</body>
+</html>

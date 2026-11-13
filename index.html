@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sophia Hwang | Portfolio</title>
-  <meta name="description" content="Sophia Hwang: Electrical Engineering at Harvard. Projects and coursework." />
+  <title>Sophia Hwang | Electrical Engineering Portfolio</title>
+  <meta name="description" content="Sophia Hwang: Harvard electrical engineering student building hardware and software. Projects, research, and coursework." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="progress" aria-hidden="true"></div>
-  <div class="glow" aria-hidden="true"></div>
   <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="nav">
     <a href="#top" class="logo">sophia<span>.</span></a>
     <nav>
       <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
       <a href="#courses">Courses</a>
       <a href="#beyond">Beyond the lab</a>
       <a href="#contact">Contact</a>
@@ -35,28 +35,28 @@
         <p class="eyebrow">Harvard '29 · Electrical Engineering</p>
         <h1>Hi, I'm <span class="grad">Sophia Hwang</span></h1>
         <p class="lead">
-          I'm studying electrical engineering and math, and I love building things
-          where hardware meets software. Here are the projects and courses
-          that shaped how I think.
+          I study electrical engineering and math, and I love building things where
+          hardware meets software: processors on FPGAs, embedded games, robots, and
+          research tools. Take a look around.
         </p>
         <div class="chips">
-          <span>SystemVerilog</span><span>Python</span><span>C++</span><span>SolidWorks</span><span>FPGA</span>
+          <span>SystemVerilog</span><span>FPGA</span><span>Python</span><span>C++</span><span>SolidWorks</span>
         </div>
         <div class="cta">
           <a class="btn primary" href="#projects">See my projects</a>
-          <a class="btn ghost" href="#courses">Courses</a>
+          <a class="btn ghost" href="#research">Research</a>
         </div>
       </div>
 
       <div class="hero-photo reveal">
         <div class="photo-frame">
-          <!-- Replace with your photo: put it in an /images folder -->
+          <!-- Put your photo at images/sophia.jpg -->
           <img src="images/sophia.jpg" alt="Sophia Hwang" onerror="this.style.display='none'" />
           <span class="photo-fallback">SH</span>
         </div>
         <div class="float-tag t1">Electrical Eng.</div>
         <div class="float-tag t2">Math secondary</div>
-        <div class="float-tag t3">Builder</div>
+        <div class="float-tag t3">Cellist 🎻</div>
       </div>
     </section>
 
@@ -73,6 +73,20 @@
       </div>
 
       <div class="grid" id="projectGrid">
+        <a class="card tilt reveal" href="projects/mips-processor.html" data-cat="hardware">
+          <div class="thumb t-e">
+            <img src="images/mips.jpg" alt="" onerror="this.remove()" />
+            <span class="emoji">🧠</span>
+          </div>
+          <div class="body">
+            <p class="meta">Fall 2026 · Computing Hardware</p>
+            <h3>Multicycle MIPS Processor</h3>
+            <p>A multicycle MIPS processor designed in SystemVerilog, verified in Vivado, and implemented on an FPGA.</p>
+            <div class="tags"><span>SystemVerilog</span><span>Vivado</span><span>FPGA</span></div>
+            <span class="view">View project <i>→</i></span>
+          </div>
+        </a>
+
         <a class="card tilt reveal" href="projects/piano-man.html" data-cat="hardware software">
           <div class="thumb t-a">
             <img src="images/piano-man.jpg" alt="" onerror="this.remove()" />
@@ -129,10 +143,28 @@
           </div>
         </a>
       </div>
+    </section>
 
-      <div class="now reveal">
-        <span class="pulse"></span>
-        <p><b>Currently:</b> implementing a MIPS processor in SystemVerilog with Vivado on an FPGA for Computing Hardware.</p>
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2 class="reveal">Research</h2>
+      <p class="sub reveal">Hardware and neuroscience, from chips to cells.</p>
+
+      <div class="courses">
+        <div class="course reveal">
+          <span class="badge">Starting soon</span>
+          <h3>Harvard Silicon-to-Systems Lab</h3>
+          <p class="org">with Prof. David Brooks &amp; Prof. Gu-Yeon Wei</p>
+          <p>I'm joining the lab to work on the Pistil chip, building an FPGA-based implementation of it. It's a natural next step from my processor work in Computing Hardware.</p>
+          <div class="tags"><span>FPGA</span><span>SystemVerilog</span><span>Chip design</span></div>
+        </div>
+        <div class="course reveal">
+          <span class="badge">Summer 2026</span>
+          <h3>Donhee Ham Research Group</h3>
+          <p class="org">Harvard · Student Researcher</p>
+          <p>Developed a Python spike-sorting package (Kilosort4) and a spike-triggered average (STA) pipeline to analyze intracellular and extracellular neuronal recordings from a 4,096-electrode CMOS microhole array.</p>
+          <div class="tags"><span>Python</span><span>Kilosort4</span><span>Neuroscience</span><span>CMOS arrays</span></div>
+        </div>
       </div>
     </section>
 
@@ -142,13 +174,13 @@
       <p class="sub reveal">What I'm studying and what I built along the way.</p>
 
       <div class="courses">
-        <div class="course reveal now-taking">
+        <div class="course reveal">
           <span class="badge">In progress</span>
           <h3>Computing Hardware</h3>
-          <p>Implementing a MIPS processor using SystemVerilog, Vivado, and FPGAs.</p>
-          <div class="tags"><span>SystemVerilog</span><span>Vivado</span><span>FPGA</span></div>
+          <p>Designing a MIPS processor with SystemVerilog, Vivado, and FPGAs.</p>
+          <div class="tags"><span>SystemVerilog</span><span>Vivado</span><a class="mini" href="projects/mips-processor.html">→ MIPS Processor</a></div>
         </div>
-        <div class="course reveal now-taking">
+        <div class="course reveal">
           <span class="badge">In progress</span>
           <h3>Circuits, Devices, and Transduction</h3>
           <p>Analog circuits and devices, with hands-on lab work.</p>
@@ -187,16 +219,14 @@
           <div class="music-text">
             <p>I've played cello since 2014. I'm in the Harvard-Radcliffe Orchestra and have previously played with the Manhattan School of Music Precollege, New York Youth Symphony, and Boston University Tanglewood Institute Young Artists Orchestra.</p>
             <p>Highlights: performing at Carnegie Hall's Stern Auditorium, Neidorff-Karpati Hall, and Ozawa Hall at Tanglewood.</p>
-            <!-- Add a recording here: <iframe src="YOUTUBE_EMBED_LINK" ...></iframe> -->
+            <!-- To add a recording: <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div> -->
           </div>
           <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         </div>
 
         <div class="tab-panel" id="tab-matcha">
           <div class="music-text">
-            <!-- Replace with your own words: favorite spots, recipe, whisking tips -->
             <p>Matcha is a big part of my life, which is how Matcha Brewer was born. I like experimenting with new drink combinations and getting the whisk technique just right.</p>
-            <p>Add your favorite recipe or a photo of your best latte here.</p>
           </div>
           <div class="matcha-art" aria-hidden="true">🍵</div>
         </div>
@@ -206,7 +236,7 @@
     <!-- CONTACT -->
     <section id="contact" class="contact reveal">
       <h2>Let's build something</h2>
-      <p>Happy to talk about hardware, projects, or matcha.</p>
+      <p>Happy to talk about hardware, research, or matcha.</p>
       <div class="cta center">
         <a class="btn primary" href="mailto:sophiahwang@college.harvard.edu">Email me</a>
         <a class="btn ghost" href="https://github.com/sopihwang29" target="_blank" rel="noopener">GitHub</a>

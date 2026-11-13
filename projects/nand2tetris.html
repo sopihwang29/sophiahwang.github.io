@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ground-Up Computer | Sophia Hwang</title>
+  <title>Nand2Tetris: General Purpose Computer | Sophia Hwang</title>
   <meta name="description" content="Built a modern computer's hardware platform and software stack starting from a single NAND gate." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <div id="progress" aria-hidden="true"></div>
-  <div class="glow" aria-hidden="true"></div>
   <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="nav">
     <a href="../index.html" class="logo">sophia<span>.</span></a>
     <nav>
       <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#research">Research</a>
       <a href="../index.html#courses">Courses</a>
       <a href="../index.html#beyond">Beyond the lab</a>
       <a href="../index.html#contact">Contact</a>
@@ -48,7 +48,7 @@
       <div class="p-main">
         <div class="block reveal">
           <h2>Overview</h2>
-          <p>Nand2Tetris walks through building a modern computer from first principles. Starting with a single NAND gate, I built up the hardware platform and then the software stack on top of it, using Hack Assembly, Jack, and Python.</p>
+          <p>Nand2Tetris builds a modern computer from first principles. Starting with a single NAND gate, I worked up through the hardware platform and then the software stack on top of it, using Hack Assembly, Jack, and Python.</p>
         </div>
 
         <div class="block reveal">
@@ -60,19 +60,14 @@
             <div class="layer"><b>Assembler</b><span>Hack Assembly to machine code</span></div>
             <div class="layer"><b>Compiler &amp; OS</b><span>The Jack language and its libraries</span></div>
           </div>
-          <p class="placeholder">✏️ Edit the layers above to match exactly what you built, and add a sentence about the project you're proudest of.</p>
-        </div>
-
-        <div class="block reveal">
-          <h2>Challenges &amp; what I learned</h2>
-          <p class="placeholder">✏️ Add: what finally made the whole stack "click", and how this prepared you for Computing Hardware.</p>
+          <p>This project is what first got me excited about computer architecture, and it led directly into the MIPS processor I built in Computing Hardware.</p>
         </div>
 
         <div class="block reveal">
           <h2>Gallery</h2>
           <div class="gallery">
-            <figure class="shot"><img src="../images/nand2tetris-1.jpg" alt="Hardware simulator" onerror="this.remove()" /><figcaption>Add screenshot: hardware simulator</figcaption></figure>
-            <figure class="shot"><img src="../images/nand2tetris-2.jpg" alt="Running Jack program" onerror="this.remove()" /><figcaption>Add screenshot: a Jack program running</figcaption></figure>
+            <figure class="shot"><img src="../images/nand2tetris-1.jpg" alt="Hardware simulator" onerror="this.closest('figure').remove()" /><figcaption>Hardware simulator</figcaption></figure>
+            <figure class="shot"><img src="../images/nand2tetris-2.jpg" alt="Running Jack program" onerror="this.closest('figure').remove()" /><figcaption>A Jack program running</figcaption></figure>
           </div>
         </div>
       </div>
@@ -91,7 +86,7 @@
 
     <nav class="pn">
       <a href="matcha-brewer.html"><span>← Previous</span>Matcha Brewer</a>
-      <a href="piano-man.html" class="next"><span>Next →</span>Tempo Tiles</a>
+      <a href="mips-processor.html" class="next"><span>Next →</span>Multicycle MIPS Processor</a>
     </nav>
   </main>
 
